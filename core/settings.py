@@ -76,8 +76,22 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portfolio_db',
+
+        'USER': 'portfoliodb_admin',
+        'PASSWORD': 'portfoliodb_admin123'
+
+        # Commented them out since this is just a
+        # dev settings file not a production one.
+
+        #'USER': 'admin',
+        #'PASSWORD': '...',
+        #'HOST': 'localhost',  # <-- Don't remove it breaks idk why ...
+        #'PORT': '',
     }
 }
 
