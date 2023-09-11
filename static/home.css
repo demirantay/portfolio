@@ -1,18 +1,153 @@
-/* --- top navigation -- */
+/*
+
+    color for now: #797D7F
+    blue: #2471A3
+    
+
+*/
+
+body {
+    padding-left: 13%;
+    padding-right: 13%;
+    font-family: 'Roboto';
+}
+
+/* ---------------- top navigation --------------- */
 .top-navigation {
     text-align: center;
+    margin-top: 15px;
 }
 
 .top-navigation a {
     text-decoration: none;
     color: black;
     font-size: 25px;
+    margin-right: 7px;
+    margin-right: 7px;
 }
 
-/* --- welcome header -- */
+.top-navigation a:hover {
+    color: #2471A3;
+    transition: 0.2s;
+}
+
+/* ------------- welcome header ------------- */
+.welcome-header {
+    border: 1px solid transparent;
+    width: 45%;
+    margin-top: 45px;
+}
+
+.welcome-header img {
+    height: auto;
+    width: 45px;
+    border-radius: 6px;
+}
+
+.welcome-header h3 {
+    font-weight: 700;
+
+}
+
+.welcome-header p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    
+}
+
+.welcome-header a {
+    text-decoration: none;
+    color: #2471A3;
+    font-weight: 900;
+    font-size: 18px;
+
+}
+
+.welcome-header a i {
+    padding:0px;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.welcome-header a:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    color: #1A5276;
+}
+
+.welcome-header a:hover i {
+    margin-left: 5px;
+    transition: 0.2s;
+}
+
+/* ---------------- projects --------------- */
+.projects-wrapper {
+    margin-top: 60px;
+}
+
+.projects-wrapper h1 {
+    border-bottom: 1px solid #E5E8E8;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.project-cell {
+    width: 30%;
+    display: inline-block;
+    margin-right: 3%;
+    margin-left: 0%;
+    margin-bottom: 40px;
+}
+
+.project-cell-img-banner {
+    background-color: #E5E8E8;
+    height: 200px;
+    width: 100%;
+    border-radius: 7px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project-cell h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.project-cell p {
+    color: #616A6B;
+}
+
+.project-cell a {
+    text-decoration: none;
+    color: #2471A3;
+}   
+
+.project-cell a:hover {
+    color: #1A5276;
+    transition: 0.2s;
+}
+
+.project-cell a:hover i {
+    transition: 0.2s;
+    margin-left: 5px;
+}
+
+.project-cell a i {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+}
 
 
-/* --- projects -- */
-
-
-/* --- footer -- */
+/* ---------------- footer --------------- */
+.footer {
+    border-top: 1px solid #E5E8E8;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #7F8C8D;
+}
