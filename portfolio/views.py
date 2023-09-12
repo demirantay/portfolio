@@ -8,6 +8,7 @@ from django.core.files import File
 from django.contrib.auth.models import User
 
 # My Module Imports
+from .models import Project
 
 
 def index(request):
@@ -15,7 +16,7 @@ def index(request):
     """
     
     try:
-        projects = 1
+        projects = Project.objects.all().order_by("-id")
     except ObjectDoesNotExist:
         projects = None
 

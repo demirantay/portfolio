@@ -73,42 +73,19 @@
     <div class="projects-wrapper">
         <h1><b>Products</b></h1>
 
-        <div class="project-cell">
-            <div class="project-cell-img-banner"></div>
-            <h3>Name</h3>
-            <!-- max chars:  115 -->
-            <p>A web-based motion graphics editor. It's a mix of 
-                After Effects and Canva, with powerful features but a simple interface.</p>
-            <a href="">motionity.app <i class="ri-arrow-right-line"></i></a>
-        </div>
-
-        <div class="project-cell">
-            <div class="project-cell-img-banner"></div>
-            <h3>Name</h3>
-            <!-- max chars:  115 -->
-            <p>A web-based motion graphics editor. It's a mix of 
-                After Effects and Canva, with powerful features but a simple interface.</p>
-            <a href="">motionity.app <i class="ri-arrow-right-line"></i></a>
-        </div>
-
-        <div class="project-cell">
-            <div class="project-cell-img-banner"></div>
-            <h3>Name</h3>
-            <!-- max chars:  115 -->
-            <p>A web-based motion graphics editor. It's a mix of 
-                After Effects and Canva, with powerful features but a simple interface.</p>
-            <a href="">motionity.app <i class="ri-arrow-right-line"></i></a>
-        </div>
-
-        <div class="project-cell">
-            <div class="project-cell-img-banner"></div>
-            <h3>Name</h3>
-            <!-- max chars:  115 -->
-            <p>A web-based motion graphics editor. It's a mix of 
-                After Effects and Canva, with powerful features but a simple interface.</p>
-            <a href="">motionity.app <i class="ri-arrow-right-line"></i></a>
-        </div>
-
+        {% for project in projects %}
+            <div class="project-cell">
+                {% if project.image %}
+                    <div class="project-cell-img-banner" style="background-image: url('{{ project.image.url }}');"></div>
+                {% else %}
+                    <div class="project-cell-img-banner"></div>
+                {% endif %}
+                <h3>{{project.header}}</h3>
+                <!-- max chars:  115 -->
+                <p>{{ project.info }}</p>
+                <a href="{{project.link}}" target="_blank">{{ project.link_text }} <i class="ri-arrow-right-line"></i></a>
+            </div>
+        {% endfor %}
 
     </div>
 
